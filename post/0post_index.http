@@ -1,0 +1,11 @@
+POST http://data.zz.baidu.com/urls?site=novel.heheking.com&token=NE9tkC5H4NjH7pu5 HTTP/1.1
+
+http://novel.heheking.com/
+http://novel.heheking.com/xuanhuan/
+http://novel.heheking.com/xianxia/
+http://novel.heheking.com/dushi/
+http://novel.heheking.com/yanqing/
+http://novel.heheking.com/lishi/
+http://novel.heheking.com/wangyou/
+http://novel.heheking.com/kehuan/
+http://novel.heheking.com/kongbu/

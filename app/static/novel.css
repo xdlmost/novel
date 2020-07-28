@@ -1,0 +1,592 @@
+html, body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, table, td, th, img, div, dl, dt, dd, input, select, form, fieldset {
+    margin: auto;
+    padding: 0;
+}
+* {
+    padding: 0px;
+    margin: auto;
+    list-style-type: none;
+    font-family: 宋体;
+    text-decoration: none;
+    color: #333;
+}
+img {
+    border: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    color: #6F78A7;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+body {
+    font-size: 12px;
+    color: #555555;
+    font-family: 宋体, "Microsoft YaHei", 微软雅黑;
+    background-color: #E9FAFF;
+}
+
+dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+dd {
+    display: block;
+    margin-inline-start: 40px;
+}
+
+.novel {
+    border: 2px solid #88C6E5;
+    margin: 10px auto;
+    line-height: 100%;
+    width: 976px;
+    overflow: hidden;
+}
+.novel_list dl {
+    margin: auto;
+    overflow: hidden;
+}
+.novel_list dt {
+    background: none repeat scroll 0 0 #C3DFEA;
+    display: inline;
+    line-height: 28px;
+    float: left;
+    margin: auto auto 5px auto;
+    width: 960px;
+    font-size: 14px;
+    padding: 5px 10px;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+}
+.novel_list dd {
+    border-bottom: 1px dashed #CCCCCC;
+    float: left;
+    line-height: 200%;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-align: left;
+    text-indent: 10px;
+    vertical-align: middle;
+    width: 25%;
+    height: 30px;
+}
+
+.content_read{
+    border: 3px solid #C3DFEA;
+    width: 980px;
+}
+
+.con_top {
+    text-align: left;
+    padding: 0px 10px;
+    line-height: 36px;
+    height: 36px;
+    width: 98%;
+    background: #E1ECED;
+    border-bottom: solid 1px #d3d3d3;
+}
+.read-titlelinke {
+    clear: both;
+    text-align: center;
+    position: relative;
+    padding: 0 0;
+}
+.bookname {
+    line-height: 30px;
+    margin: auto;
+}
+.navi {
+    text-align: center;
+    width: 900px;
+    padding-top: 10px;
+}
+.navi a {
+    padding: 0 15px;
+    font-size: 14px;
+}
+.bookname h1 {
+    text-align: center;
+    font: 30px/35px "黑体";
+    padding-top: 10px;
+}
+
+.ccontent {
+    width: 940px;
+    font-family: 方正启体简体, "Microsoft YaHei", 微软雅黑, 宋体;
+    font-size: 24px;
+    letter-spacing: 0.2em;
+    line-height: 180%;
+    padding-top: 10px;
+    margin: auto;
+}
+
+#maininfo {
+    width: 950px;
+}
+
+#fmimg {
+    background-color: #E1ECED;
+    float: left;
+    padding: 5px;
+    width: 156px;
+    position: relative;
+    margin: 15px 15px 0 10px;
+}
+
+#fmimg img {
+    height: 180px;
+    margin: 3px;
+    width: 150px;
+    border: none;
+}
+
+#info {
+    padding: 0 10px;
+    margin: 15px 0 0 0;
+    font-size: 14px;
+    float: left;
+    width: 720px;
+}
+
+.clear {
+    clear: both;
+    padding: 0;
+    margin: auto;
+    display: block;
+}
+
+#info h1 {
+    font-size: 24px;
+    font-family: 黑体;
+    font-weight: bold;
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+#info p {
+    height: 25px;
+    line-height: 25px;
+    padding-top: 2px;
+    float: left;
+    width: 350px;
+    margin: auto;
+    overflow: hidden;
+}
+
+#intro {
+    overflow: hidden;
+    line-height: 180%;
+    border-top: 1px dashed #b2b2b2;
+    font-size: 12px;
+    clear: both;
+    margin-top: 10px;
+    padding-top: 10px;
+    display: block;
+}
+
+.nav {
+    margin: auto;
+    width: 980px;
+    height: 40px;
+    overflow: hidden;
+    background: #88C6E5;
+}
+
+.nav ul li {
+    float: left;
+    line-height: 42px;
+    padding: 0 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.nav ul li a {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#main {
+    width: 980px;
+    margin: auto;
+}
+
+#hotcontent {
+    padding-top: 10px;
+}
+
+#hotcontent .l {
+    border: 3px solid #C3DFEA;
+    padding: 0px 0px 6px 0px;
+    float: left;
+    width: 695px;
+    overflow: hidden;
+    background: none repeat scroll 0 0 #FEF9EF;
+}
+
+#hotcontent .l .item {
+    width: 327px;
+    float: left;
+    padding: 15px 5px 5px 15px;
+}
+
+#hotcontent .l .item .image {
+    float: left;
+    width: 120px;
+}
+
+#hotcontent .l .item .image img {
+    border: solid 1px #DDDDDD;
+    padding: 1px;
+    background-color: White;
+    width: 120px;
+    height: 150px;
+}
+
+#hotcontent .l .item dl {
+    padding: 0px 5px 0px 0px;
+    float: right;
+    width: 190px;
+}
+
+#hotcontent .l .item dl dt {
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    font-size: 14px;
+    border-bottom: dotted 1px #6191D0;
+    font-weight: bold;
+}
+.main {
+    width: 980px;
+    margin: auto;
+}
+#hotcontent .l .item dl dd {
+    padding: 7px 0px 0px 0px;
+    line-height: 20px;
+    color: #9E9E9E;
+    text-indent: 2em;
+    height: 105px;
+    overflow: hidden;
+    margin-inline-start: 0px;
+}
+#hotcontent .l .item dl .update {
+    height: 14px;
+    overflow: hidden;
+    display: inline-block;
+    padding: 0;
+    line-height: 14px;
+    text-indent: 0;
+}
+
+#hotcontent .l .item dl dt span {
+    float: right;
+    font-weight: normal;
+    color: #888;
+}
+
+#hotcontent .r {
+    float: right;
+    width: 265px;
+    border: 3px solid #C3DFEA;
+    background: none repeat scroll 0 0 #FEF9EF;
+}
+
+#hotcontent h2 {
+    padding: 0px 0px 0px 10px;
+    background-color: #E1ECED;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    overflow: hidden;
+    border-bottom: solid 1px #DDDDDD;
+    margin: 0;
+}
+
+#hotcontent .r ul {
+    padding: 5px 10px;
+}
+
+#hotcontent .r li {
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+
+#hotcontent .r li span {
+    float: left;
+    display: inline-block;
+}
+#hotcontent .r li .s1 {
+    width: 40px;
+}
+#hotcontent .r li .s2 {
+    width: 100px;
+}
+#hotcontent .r li .s5 {
+    color: #B3B3B3;
+    float: right;
+    text-align: right;
+}
+
+.novelslist {
+    margin: 10px auto;
+    border: 3px solid #C3DFEA;
+    width: 968px;
+    padding: 3px;
+    background: none repeat scroll 0 0 #FEF9EF;
+}
+.novelslist .content {
+    border-right: dotted 1px #D1D1D1;
+    padding: 0px 3px;
+    float: left;
+    width: 315px;
+    height: 100%;
+}
+.novelslist .content h2 {
+    border-bottom: solid 1px #A6D3E8;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 5px;
+    line-height: 25px;
+    height: 25px;
+    overflow: hidden;
+    margin: 0;
+    background-color: #F6F8FE;
+}
+.novelslist .content .image {
+    padding: 10px 0px 0px 5px;
+    float: left;
+    width: 71px;
+}
+.novelslist .content .image img {
+    width: 67px;
+    height: 82px;
+    border: solid 1px #DDDDDD;
+    padding: 1px;
+    background-color: white;
+}
+.novelslist .content dl {
+    padding: 10px 0px 0px 0px;
+    float: right;
+    width: 219px;
+}
+.novelslist .content dl dt {
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    font-weight: bold;
+}
+.novelslist .content dl dd {
+    line-height: 20px;
+    height: 60px;
+    overflow: hidden;
+    color: #888;
+    margin-inline-start: 0px;
+    text-indent: 2em;
+}
+.novelslist .content ul {
+    padding: 10px 0px 0px 0px;
+}
+.novelslist .content ul li {
+    color: #8E8E8E;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    overflow: hidden;
+    float: left;
+    width: 155px;
+    margin: 3px 0;
+}
+.novelslist .content ul li a {
+    font-size: 13px;
+}
+.novelslist1 {
+    margin-top: 620px;
+    height: 310px;
+}
+.novelslist2 {
+    height: 310px;
+}
+
+.footer {
+    margin: auto;
+    overflow: hidden;
+    width: 980px;
+    text-align: center;
+}
+.footer_link {
+    width: 100%;
+    border-bottom: 2px solid #C3DFEA;
+    height: 05px;
+    line-height: 0px;
+    overflow: hidden;
+    margin: 5px auto;
+}
+.footer_cont {
+    padding: 8px 0;
+}
+.footer_cont p {
+    line-height: 22px;
+    color: #b2b2b2;
+}
+#newscontent .l {
+    border: 3px solid #C3DFEA;
+    float: left;
+    width: 695px;
+    background: #fafafa;
+}
+#newscontent .l ul {
+    padding: 10px;
+}
+#newscontent .l li {
+    padding: 5px 0px 0px 0px;
+    border-bottom: solid 1px #DDDDDD;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+}
+#newscontent .l li span {
+    float: left;
+    display: inline-block;
+}
+#newscontent .l li .s1 {
+    width: 75px;
+}
+#newscontent .l li .s2 {
+    width: 150px;
+}
+#newscontent .l li .s3 {
+    width: 250px;
+}
+#newscontent .l li .s4 {
+    color: #B3B3B3;
+    width: 60px;
+    text-align: right;
+}
+#newscontent .l li .s5 {
+    color: #B3B3B3;
+    float: right;
+    text-align: right;
+}
+#newscontent .r {
+    float: right;
+    width: 265px;
+    border: 3px solid #C3DFEA;
+    background: #fafafa;
+}
+#newscontent .r ul {
+    padding: 10px;
+}
+#newscontent .r li {
+    padding: 5px 0px 0px 0px;
+    border-bottom: solid 1px #DDDDDD;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+}
+#newscontent .r li .s1 {
+    width: 40px;
+}
+#newscontent .r li .s2 {
+    width: 90px;
+}
+#newscontent .r li .s5 {
+    color: #B3B3B3;
+    float: right;
+    text-align: right;
+}
+#newscontent h2 {
+    margin: 0px;
+    overflow: hidden;
+    padding: 0px 0px 0px 10px;
+    background-color: #E1ECED;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: solid 1px #DDDDDD;
+}
+
+#hotcontent .k .item {
+    width: 315px;
+    float: left;
+    padding: 5px 0px 0px 5px;
+}
+
+
+#hotcontent .m {
+    border: 3px solid #C3DFEA;
+    margin: 0px auto 10px auto;
+    padding: 5px;
+    float: left;
+    width: 964px;
+    height: 355px;
+    overflow: hidden;
+}
+#hotcontent .m .item {
+    width: 315px;
+    float: left;
+    padding: 5px 0px 0px 5px;
+}
+#hotcontent .m .item .image {
+    float: left;
+    width: 120px;
+}
+#hotcontent .m .item .image img {
+    border: solid 1px #DDDDDD;
+    padding: 1px;
+    background-color: White;
+    height: 150px;
+    width: 120px;
+}
+#hotcontent .m .item dl {
+    padding: 0px 5px 0px 0px;
+    float: right;
+    width: 180px;
+    text-align: left;
+}
+#hotcontent .m .item dl dt {
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    border-bottom: dotted 1px #6191D0;
+    font-weight: bold;
+    font-size: 14px;
+}
+#hotcontent .m .item dl dt span {
+    float: right;
+    font-weight: normal;
+    font-size: 12px;
+    vertical-align: bottom;
+    height: 25px;
+    line-height: 25px;
+    color: #999;
+}
+#hotcontent .m .item dl dd {
+    padding: 7px 0px 0px 0px;
+    line-height: 20px;
+    color: #9E9E9E;
+    text-indent: 2em;
+    height: 120px;
+    overflow: hidden;
+}

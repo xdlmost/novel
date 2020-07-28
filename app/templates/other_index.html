@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% import 'components/make_info.html' as make_info %}
+
+
+{% block tdk %}
+<title>呵呵大王看小说</title>
+<meta name="keywords" content="呵呵大王看小说,热门小说,最新小说,最新章节">
+<meta name="description" content="呵呵大王看小说">
+
+{% endblock %}
+
+{% block content %}
+<div class="main">
+    <div id="hotcontent">
+        <div class="m" >
+            {{ make_info.make_index_cards2(data['top_hot'],base_url)}}
+        </div>
+    </div>
+    <div id="newscontent" style="margin-top: 380px;">
+        <div class="l">
+            <h2>{{data['type']}}小说最新更新列表</h2>
+            {{make_info.make_other_index_with_more_info_cards(data['last_update_chapters_novel'],base_url)}}
+        </div>
+        <div class="r">
+            <h2>{{data['type']}}小说排行榜</h2>
+            {{make_info.make_other_index_cards(data['other_hot'],base_url)}}
+        </div>
+    </div>
+</div>
+{% endblock %}

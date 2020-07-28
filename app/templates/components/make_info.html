@@ -1,0 +1,112 @@
+
+{% macro _make_card(title,author,base_url,bookid,description,latest_charpter_id,latest_charpter_title) %}
+<div class="item">
+	<div class="image">
+		<a href="{{base_url}}/{{bookid}}/" title="{{title}}">
+			<img src="/static/covers/{{bookid}}.jpg" alt="{{title}}">
+			</a>
+		</div>
+		<dl>
+			<dt>
+				<span>作者：{{author}}</span>
+				<a href="{{base_url}}/{{bookid}}/" title="{{title}}">{{title}}</a>
+			</dt>
+			<dd> {{description}}</dd>
+			<dd class="update">更新：
+				<a href="{{base_url}}/{{bookid}}/{{latest_charpter_id}}" title="{{latest_charpter_title}}">{{latest_charpter_title}}</a>
+			</dd>
+		</dl>
+		<div class="clear"></div>
+	</div>
+{% endmacro %}
+
+{% macro make_index_cards(infos,base_url) %}
+{% for info in infos %}
+{{_make_card(info['title'],info['author'],base_url,info['bookid'],info['description'],info['latest_charpter_id'],info['latest_charpter_title']) }}
+{% endfor %}
+{% endmacro %}
+
+
+{% macro _make_card2(title,author,base_url,bookid,description) %}
+<div class="item">
+	<div class="image">
+		<a href="{{base_url}}/{{bookid}}/" title="{{title}}">
+			<img src="/static/covers/{{bookid}}.jpg" alt="{{title}}">
+			</a>
+		</div>
+		<dl>
+			<dt>
+				<span>作者：{{author}}</span>
+				<a href="{{base_url}}/{{bookid}}/" title="{{title}}">{{title}}</a>
+			</dt>
+			<dd> {{description}}</dd>
+		</dl>
+		<div class="clear"></div>
+	</div>
+{% endmacro %}
+
+{% macro make_index_cards2(infos,base_url) %}
+{% for info in infos %}
+{{_make_card2(info['title'],info['author'],base_url,info['bookid'],info['description']) }}
+{% endfor %}
+{% endmacro %}
+
+
+{% macro make_other_index_cards(infos,base_url) %}
+<ul>
+{% for info in infos %}
+	<li>
+		<span class="s1">[{{info['type']}}]</span>
+		<span class="s2">
+			<a href="{{base_url}}/{{info['bookid']}}/" title="{{info['title']}}">{{info['title']}}</a></span>
+		<span class="s5">{{info['author']}}</span>
+	</li>
+{% endfor %}
+</ul>
+{% endmacro %}
+
+{% macro make_other_index_with_more_info_cards(infos,base_url) %}
+<ul>
+{% for info in infos %}
+    <li>
+		<span class="s1">[{{info['type']}}小说]</span>
+		<span class="s2">
+			<a href="{{base_url}}/{{info['bookid']}}/" title="{{info['title']}}">{{info['title']}}</a>
+		</span>
+		<span class="s3"><a href="{{base_url}}/{{info['bookid']}}/{{info['latest_charpter_id']}}" title="{{info['latest_charpter_title']}}">{{info['latest_charpter_title']}}</a></span>
+		<span class="s4">{{info['author']}}</span>
+		<span class="s5">{{info['latest_charpter_date']}}</span>
+	</li>
+{% endfor %}
+</ul>
+{% endmacro %}
+
+
+{% macro make_novels_list_3item(infos,base_url) %}
+{% for info in infos %}
+<div class="content">
+	<h2>{{info['type']}}小说</h2>
+	<div class="top">
+		<div class="image">
+			<a href="{{base_url}}/{{info['top_novel']['bookid']}}/" target="_blank" title="{{info['top_novel']['title']}}">
+				<img src="/static/covers/{{info['top_novel']['bookid']}}.jpg" alt="{{info['top_novel']['title']}}">
+			</a>	
+		</div>
+		<dl>
+			<dt>
+				<a href="{{base_url}}/{{info['top_novel']['bookid']}}/" title="{{info['top_novel']['title']}}">{{info['top_novel']['title']}}</a>
+			</dt>
+			<dd>
+				{{info['top_novel']['description']}}
+			</dd>
+		</dl>
+		<div class="clear"></div>
+	</div>
+		<ul>
+		{% for n in info['other_novels'] %}
+		<li><a href="{{base_url}}/{{n['bookid']}}/" title="{{n['title']}}">{{n['title']}}</a>/{{n['author']}}</li>
+		{% endfor %}
+		</ul>
+	</div>
+{% endfor %}
+{% endmacro %}

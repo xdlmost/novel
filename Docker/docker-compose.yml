@@ -1,0 +1,11 @@
+version: '3'
+services:
+  scrapy:
+    build: ./scrapy
+    volumes:
+     - /home/xdlmost/projects/novel/app2:/webapp/app
+     - /home/xdlmost/projects/novel/app2/scrapy_config/crond:/var/spool/cron/crontabs
+    networks:
+    - cc_net
+networks:
+    cc_net:

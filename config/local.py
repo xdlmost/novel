@@ -1,0 +1,13 @@
+DATA_DIR='data'
+STATIC_DIR='app/static'
+COVERS_DIR=STATIC_DIR+'/covers'
+
+URL_BASE='http://127.0.0.1:5000'
+#URL_BASE='http://novel.heheking.com'
+
+INDEX_MAIN_COUNT=6
+INDEX_OTHER_COUNT=19
+
+
+
+UPDATE_COUNT=10

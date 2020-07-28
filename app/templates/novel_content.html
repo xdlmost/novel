@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% macro make_novel_content(data) %}
+    <div class="con_top">
+        <a href="/">呵呵大王看小说</a> > <a href="/{{data['bookid']}}">{{data['bookname']}}</a> >{{data['charptername']}}
+    </div>
+    <div class="bookname">
+        <h1>{{data['charptername']}}</h1>
+            <div class="read-titlelinke">
+                <span>作者：{{data['author']}}</span>
+            </div>
+            <div class='navi'>
+                <a href="/{{data['bookid']}}/{{data['pid']}}">上一章</a>
+                <a href="/{{data['bookid']}}">章节目录</a>
+                <a href="/{{data['bookid']}}/{{data['nid']}}">下一章</a>
+            </div>
+    </div>
+    <div class = "ccontent">
+    {% for item in data['content'] %}
+        &nbsp;&nbsp;&nbsp;&nbsp;{{item}}<br><br>
+    {% endfor %}
+    </div>
+    <div class='navi'>
+        <a href="/{{data['bookid']}}/{{data['pid']}}">上一章</a>
+        <a href="/{{data['bookid']}}">章节目录</a>
+        <a href="/{{data['bookid']}}/{{data['nid']}}"">下一章</a>
+    </div>
+
+{% endmacro %}
+
+{% block tdk %}
+<title>{{data['charptername']}}_{{data['bookname']}}_{{data['author']}}|呵呵大王看小说</title>
+<meta name="keywords" content="{{data['charptername']}}_{{data['bookname']}}_{{data['author']}}|呵呵大王看小说">
+<meta name="description" content="{{data['charptername']}}_{{data['bookname']}}_{{data['author']}}|呵呵大王看小说">
+
+{% endblock %}
+
+{% block content %}
+<div class="main">
+    <div></div>
+
+    <div class="content_read">
+         {{ make_novel_content(data)}}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% macro make_novel_list(novelid,title,list) %}
+    <dl>
+        {% for item in list %}
+        {% if item['isTitle'] %}
+        <dt>{{item['title']}}</dt>
+        {% else %}
+        <dd><a href="{{url_base}}/{{novelid}}/{{item['url']}}">{{item['title']}}</a></dd>
+        {% endif %}
+        
+        {% endfor %}
+    </dl>
+{% endmacro %}
+
+{% block tdk %}
+<title>{{data['title']}}_{{data['type']}}小说_{{data['author']}}|呵呵大王看小说</title>
+<meta name="keywords" content="{{data['title']}}_{{data['type']}}小说_{{data['author']}}|呵呵大王看小说">
+<meta name="description" content="{{data['title']}}_{{data['type']}}小说_{{data['author']}}|呵呵大王看小说">
+
+{% endblock %}
+
+{% block content %}
+<div class="main">
+    <div class="novel">
+        <div id="maininfo">
+            <div id="fmimg">
+                <img width="120px" height="180px" onerror="/static/covers/nocover.jpg" src="/static/covers/{{data['novelid']}}.jpg" alt="{{data['title']}}">
+            </div>
+            <div id="info">
+                <h1>{{data['title']}}</h1>
+                <p>作者：{{data['author']}}</p>
+                <p>动作：</p>
+                <p>更新时间：{{data['last_date']}}</p>
+                <p>最新：<a href="{{url_base}}/{{data['novelid']}}/{{data['last_id']}}">{{data['last_title']}}</a></p>
+                <div class="clear"></div>
+                <div id="intro">
+                    {{data['description']}}
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="novel_info"></div>
+        <div class="novel_list">
+            {{ make_novel_list(data['novelid'],data['title'],data['list'])}}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,81 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python: Flask",
+            "type": "python",
+            "request": "launch",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "server.py",
+                "FLASK_ENV": "development",
+                "FLASK_DEBUG": "0"
+            },
+            "args": [
+                "run",
+                "--no-debugger",
+                "--no-reload"
+            ],
+            "jinja": true
+        },
+        {
+            "name": "Python: 当前文件",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Scrapy-index",
+            "type": "python",
+            "request": "launch",
+            "module": "scrapy",
+            "args": [
+                "crawl",
+                "index",
+                "-s",
+                "CONCURRENT_REQUESTS=1"
+            ],
+            "cwd": "${workspaceFolder}/biqu"
+        },
+        {
+            "name": "Scrapy-content",
+            "type": "python",
+            "request": "launch",
+            "module": "scrapy",
+            "args": [
+                "crawl",
+                "content",
+            ],
+            "cwd": "${workspaceFolder}/biqu"
+        },
+        {
+            "name": "Scrapy-update",
+            "type": "python",
+            "request": "launch",
+            "module": "scrapy",
+            "args": [
+                "crawl",
+                "update",
+            ],
+            "cwd": "${workspaceFolder}/biqu",
+            "justMyCode": false
+        },
+        {
+            "name": "Scrapy-biqu",
+            "type": "python",
+            "request": "launch",
+            "module": "scrapy",
+            "args": [
+                "crawl",
+                "biqu",
+            ],
+            "cwd": "${workspaceFolder}/biqu",
+            "justMyCode": false
+        },
+    ]
+}
